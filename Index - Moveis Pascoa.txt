@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Móveis Páscoa - Catálogo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra Lateral (Menu) -->
+  <aside class="sidebar">
+    <div class="logo">
+      <h1>Móveis Páscoa</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#destaques">Destaques</a></li>
+        <li><a href="#sofas">Sofás</a></li>
+        <li><a href="#quartos">Quartos</a></li>
+        <li><a href="#decoracao">Decoração</a></li>
+        <li><a href="#sobre-nos">Sobre Nós</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Secção Destaques -->
+    <section id="destaques" class="hero">
+      <h2>Destaques</h2>
+      <p>Alguns dos nossos melhores móveis em destaque.</p>
+      <div class="produtos-lista">
+        <!-- Produto 1 -->
+        <div class="produto">
+          <img src="https://via.placeholder.com/300x200?text=Sof%C3%A1+Destaque" alt="Sofá Destaque">
+          <h3>Sofá Luxo</h3>
+          <button class="btn-orcamento" data-produto="Sofá Luxo">Pedir Orçamento</button>
+        </div>
+        <!-- Produto 2 -->
+        <div class="produto">
+          <img src="https://via.placeholder.com/300x200?text=Mesa+Destaque" alt="Mesa Destaque">
+          <h3>Mesa Moderna</h3>
+          <button class="btn-orcamento" data-produto="Mesa Moderna">Pedir Orçamento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorias (Sofás) -->
+    <section id="sofas" class="categoria">
+      <h2>Sofás</h2>
+      <div class="produtos-lista">
+        <div class="produto">
+          <img src="https://via.placeholder.com/300x200?text=Sof%C3%A1+1" alt="Sofá 1">
+          <h3>Sofá Confort</h3>
+          <button class="btn-orcamento" data-produto="Sofá Confort">Pedir Orçamento</button>
+        </div>
+        <div class="produto">
+          <img src="https://via.placeholder.com/300x200?text=Sof%C3%A1+2" alt="Sofá 2">
+          <h3>Sofá Design</h3>
+          <button class="btn-orcamento" data-produto="Sofá Design">Pedir Orçamento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorias (Quartos) -->
+    <section id="quartos" class="categoria">
+      <h2>Quartos</h2>
+      <div class="produtos-lista">
+        <div class="produto">
+          <img src="https://via.placeholder.com/300x200?text=Cama+1" alt="Cama 1">
+          <h3>Cama King</h3>
+          <button class="btn-orcamento" data-produto="Cama King">Pedir Orçamento</button>
+        </div>
+        <div class="produto">
+          <img src="https://via.placeholder.com/300x200?text=Guarda-roupa+1" alt="Guarda-roupa 1">
+          <h3>Guarda-roupa Premium</h3>
+          <button class="btn-orcamento" data-produto="Guarda-roupa Premium">Pedir Orçamento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decoração -->
+    <section id="decoracao" class="categoria">
+      <h2>Decoração</h2>
+      <div class="produtos-lista">
+        <div class="produto">
+          <img src="https://via.placeholder.com/300x200?text=Vaso+Decorativo" alt="Vaso Decorativo">
+          <h3>Vaso Decorativo</h3>
+          <button class="btn-orcamento" data-produto="Vaso Decorativo">Pedir Orçamento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre-nos" class="categoria">
+      <h2>Sobre Nós</h2>
+      <p>A Móveis Páscoa é uma empresa especializada em mobiliário de qualidade...</p>
+      <!-- etc... -->
+    </section>
+
+    <!-- Contactos -->
+    <section id="contactos" class="categoria">
+      <h2>Contactos</h2>
+      <p>Email: exemplo@moveispascoa.pt</p>
+      <p>Telefone: 999 999 999</p>
+      <p>Morada: Rua Exemplo, 123, Lisboa</p>
+    </section>
+  </main>
+
+  <!-- Modal/Pop-up para Pedir Orçamento -->
+  <div id="modal-orcamento" class="modal">
+    <div class="modal-content">
+      <span class="fechar">&times;</span>
+      <h2>Pedir Orçamento</h2>
+      <!-- FORMULÁRIO PARA FORMSPREE -->
+      <form 
+        id="form-orcamento" 
+        action="https://formspree.io/f/SEU_FORM_ID" 
+        method="POST"
+      >
+        <!-- O nome do produto (readonly) -->
+        <label for="produto">Produto</label>
+        <input type="text" id="produto" name="produto" readonly>
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <!-- Ao submeter, o Formspree envia-te o email -->
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

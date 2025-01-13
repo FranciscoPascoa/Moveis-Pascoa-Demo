@@ -1,0 +1,170 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #ffffff; /* branco */
+  color: #000000; /* preto */
+}
+
+/* Barra Lateral (aside) */
+.sidebar {
+  width: 250px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo h1 {
+  font-size: 1.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.sidebar a:hover {
+  color: #888; /* muda para cinzento claro */
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Lista de produtos */
+.produtos-lista {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.produto {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 220px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  margin-bottom: 10px;
+}
+
+.btn-orcamento {
+  background-color: #000; /* preto */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-orcamento:hover {
+  background-color: #333;
+}
+
+/* Modal */
+.modal {
+  display: none; /* escondido por padrão */
+  position: fixed; 
+  z-index: 999;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 60px auto;
+  padding: 20px;
+  width: 400px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #333;
+}
+
+/* Fechar modal (X) */
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
